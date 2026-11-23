@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EQUAL — Understanding Gender Equality | UN SDG 05 Research</title>
+  <meta name="description" content="An interactive educational platform and research survey exploring United Nations Sustainable Development Goal 5: Gender Equality.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="announcement-bar" role="region" aria-label="Project Notice">
+    <div class="container announcement-content">
+      <span class="badge-mini">TREP Academic Project</span>
+      <p class="announcement-text">
+        Advancing UN Sustainable Development Goal 05 · Gender Equality &amp; Empowerment
+      </p>
+      <a href="#survey" class="announcement-link">Participate Now &rarr;</a>
+    </div>
+  </aside>
+
+  <!-- Sticky Navigation Bar -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      <a href="#hero" class="brand-logo" aria-label="EQUAL Home">
+        <span class="logo-mark">
+          <svg viewBox="0 0 28 28" width="24" height="24" aria-hidden="true" focusable="false">
+            <circle cx="14" cy="14" r="13" fill="#8F2635" />
+            <line x1="8" y1="11" x2="20" y2="11" stroke="#FAF7F2" stroke-width="2.5" stroke-linecap="round" />
+            <line x1="8" y1="17" x2="20" y2="17" stroke="#FAF7F2" stroke-width="2.5" stroke-linecap="round" />
+          </svg>
+        </span>
+        <span class="logo-text">EQUAL</span>
+        <span class="logo-badge">SDG 05</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#sdg-targets" class="nav-link">SDG 05</a></li>
+          <li><a href="#survey" class="nav-link">Survey</a></li>
+          <li><a href="#insights" class="nav-link">Insights</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#survey" class="btn btn-primary nav-cta">Take the Survey</a>
+        
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileNav">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+      <ul class="mobile-nav-list">
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#sdg-targets" class="mobile-nav-link">SDG 05</a></li>
+        <li><a href="#survey" class="mobile-nav-link">Survey</a></li>
+        <li><a href="#insights" class="mobile-nav-link">Insights</a></li>
+        <li class="mobile-nav-cta">
+          <a href="#survey" class="btn btn-primary btn-block">Take the Survey</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- 2. HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        
+        <div class="hero-content">
+          <div class="hero-eyebrow">
+            <span class="eyebrow-dot"></span>
+            UNITED NATIONS SUSTAINABLE DEVELOPMENT GOALS · GOAL 05
+          </div>
+          
+          <h1 class="hero-heading">
+            Equality begins when everyone gets an <span class="text-serif-italic">equal voice.</span>
+          </h1>
+          
+          <p class="hero-description">
+            Gender equality is more than equal opportunities. It is about creating a world where everyone can participate, lead, learn, and live without discrimination.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#survey" class="btn btn-primary btn-lg">
+              <span>Take the Survey</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#about" class="btn btn-outline btn-lg">
+              <span>Explore the Issue</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+            </a>
+          </div>
+
+          <div class="hero-metadata">
+            <div class="metadata-item">
+              <span class="meta-label">Framework</span>
+              <span class="meta-value">UN 2030 Agenda</span>
+            </div>
+            <div class="metadata-divider"></div>
+            <div class="metadata-item">
+              <span class="meta-label">Objective</span>
+              <span class="meta-value">TREP College Research</span>
+            </div>
+            <div class="metadata-divider"></div>
+            <div class="metadata-item">
+              <span class="meta-label">Live Platform</span>
+              <span class="meta-value">Dynamic Survey &amp; Analytics</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="editorial-art-card">
+            <!-- Custom Editorial Illustration for Gender Equality -->
+            <svg class="hero-svg" viewBox="0 0 540 520" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Abstract illustration symbolizing balance, voice, and gender equality">
+              <defs>
+                <linearGradient id="burgundyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#8F2635" />
+                  <stop offset="100%" stop-color="#5C1420" />
+                </linearGradient>
+                <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#E9C9CC" />
+                  <stop offset="100%" stop-color="#FAF7F2" />
+                </linearGradient>
+                <linearGradient id="lavenderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#E9E3F2" />
+                  <stop offset="100%" stop-color="#D2C3E5" />
+                </linearGradient>
+                <linearGradient id="redAccentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#E5243B" />
+                  <stop offset="100%" stop-color="#8F2635" />
+                </linearGradient>
+                <filter id="subtleShadow" x="-10%" y="-10%" width="120%" height="120%">
+                  <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#30202F" flood-opacity="0.10" />
+                </filter>
+              </defs>
+
+              <!-- Editorial Background Panels -->
+              <rect x="40" y="30" width="460" height="460" rx="28" fill="#FAF7F2" stroke="#E9C9CC" stroke-width="1.5" />
+              <rect x="65" y="55" width="410" height="410" rx="20" fill="#FFFFFF" filter="url(#subtleShadow)" />
+
+              <!-- Geometric Background Arcs -->
+              <circle cx="270" cy="260" r="170" stroke="#E9E3F2" stroke-width="1.5" stroke-dasharray="6 6" />
+              <circle cx="270" cy="260" r="130" fill="url(#lavenderGrad)" fill-opacity="0.25" />
+
+              <!-- Symbolic Balance Axis -->
+              <line x1="140" y1="260" x2="400" y2="260" stroke="#30202F" stroke-width="3" stroke-linecap="round" />
+              <line x1="270" y1="130" x2="270" y2="390" stroke="#8F2635" stroke-width="2" stroke-dasharray="4 4" />
+              <polygon points="270,110 263,130 277,130" fill="#8F2635" />
+
+              <!-- Left Plate / Archetype (Rising Form) -->
+              <g class="hero-anim-left">
+                <line x1="180" y1="260" x2="180" y2="210" stroke="#8F2635" stroke-width="2" />
+                <path d="M130 210 Q180 230 230 210 Z" fill="#8F2635" />
+                <!-- Silhouette Silhouette 1 -->
+                <circle cx="180" cy="155" r="24" fill="#8F2635" />
+                <path d="M152 210 C152 186 164 176 180 176 C196 176 208 186 208 210 Z" fill="#8F2635" />
+              </g>
+
+              <!-- Right Plate / Archetype (Balanced Form) -->
+              <g class="hero-anim-right">
+                <line x1="360" y1="260" x2="360" y2="210" stroke="#E5243B" stroke-width="2" />
+                <path d="M310 210 Q360 230 410 210 Z" fill="#E5243B" />
+                <!-- Silhouette Silhouette 2 -->
+                <circle cx="360" cy="155" r="24" fill="#E5243B" />
+                <path d="M332 210 C332 186 344 176 360 176 C376 176 388 186 388 210 Z" fill="#E5243B" />
+              </g>
+
+              <!-- Central Fulcrum & Equal Symbol -->
+              <circle cx="270" cy="260" r="32" fill="#30202F" />
+              <rect x="254" y="252" width="32" height="5" rx="2.5" fill="#FAF7F2" />
+              <rect x="254" y="263" width="32" height="5" rx="2.5" fill="#FAF7F2" />
+              <polygon points="270,292 250,335 290,335" fill="#30202F" />
+
+              <!-- Ascending Ray Ornaments -->
+              <circle cx="270" cy="90" r="7" fill="#E5243B" />
+              <circle cx="205" cy="100" r="4.5" fill="#8F2635" />
+              <circle cx="335" cy="100" r="4.5" fill="#8F2635" />
+              <circle cx="150" cy="130" r="3.5" fill="#E9C9CC" />
+              <circle cx="390" cy="130" r="3.5" fill="#E9C9CC" />
+
+              <!-- Lower Decorative Foundation Banner -->
+              <rect x="150" y="365" width="240" height="42" rx="21" fill="#FAF7F2" stroke="#E9C9CC" />
+              <text x="270" y="391" font-family="'DM Sans', sans-serif" font-size="12" font-weight="700" fill="#30202F" text-anchor="middle" letter-spacing="1.5">GLOBAL HARMONY &amp; RIGHTS</text>
+            </svg>
+
+            <!-- Floating Editorial Callouts -->
+            <div class="hero-floating-card card-top">
+              <span class="float-icon" aria-hidden="true">🎯</span>
+              <div>
+                <span class="float-title">SDG Target 2030</span>
+                <span class="float-sub">Full, Equal &amp; Meaningful Participation</span>
+              </div>
+            </div>
+
+            <div class="hero-floating-card card-bottom">
+              <div class="quote-mark" aria-hidden="true">&ldquo;</div>
+              <p class="float-quote">
+                "No nation can rise higher than the status of its women."
+              </p>
+              <span class="float-author">&mdash; Human Rights Charter</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. ABOUT SDG 5 -->
+    <section class="about-section" id="about">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-eyebrow">GLOBAL MANDATE &amp; MISSION</span>
+          <h2 class="section-title">Sustainable Development Goal 05</h2>
+          <div class="title-underline"></div>
+          <p class="section-description">
+            Gender equality is not merely a fundamental human right, but a necessary foundation for a peaceful, prosperous, and sustainable world. SDG 5 provides an actionable blueprint to dismantle systemic barriers, empower marginalized voices, and build institutional equity across all sectors of society.
+          </p>
+        </div>
+
+        <!-- Highlights Row / Editorial Narrative -->
+        <div class="about-narrative-grid">
+          <div class="narrative-card narrative-primary">
+            <div class="narrative-badge">Why It Matters</div>
+            <h3 class="narrative-title">The Foundation of Human Dignity &amp; Prosperity</h3>
+            <p>
+              When women and non-binary individuals are afforded equal access to education, healthcare, decent work, and political representation, economies grow faster, children thrive, and communities become more peaceful and resilient.
+            </p>
+            <div class="narrative-stat">
+              <span class="stat-number">1 in 3</span>
+              <span class="stat-caption">women globally still experience physical or sexual violence in their lifetimes.</span>
+            </div>
+          </div>
+
+          <div class="narrative-card narrative-secondary">
+            <div class="narrative-badge">The TREP Initiative</div>
+            <h3 class="narrative-title">Transforming Awareness Into Action</h3>
+            <p>
+              This research platform was created as part of the college TREP initiative to benchmark public awareness, analyze student and community attitudes, and elevate discourse from passive agreement to tangible cultural and systemic change.
+            </p>
+            <div class="narrative-stat">
+              <span class="stat-number">2.4x</span>
+              <span class="stat-caption">more unpaid care and domestic work is performed by women compared to men worldwide.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6 Target Cards Covering Core SDG 5 Pillars -->
+        <div class="targets-header" id="sdg-targets">
+          <span class="targets-eyebrow">ACTION AREAS</span>
+          <h3 class="targets-heading">Six Pillars of SDG 5 Implementation</h3>
+          <p class="targets-sub">Explore the foundational targets defined by the United Nations to achieve comprehensive gender equality by 2030.</p>
+        </div>
+
+        <div class="targets-grid">
+          
+          <!-- Card 1: Ending Discrimination -->
+          <article class="target-card">
+            <div class="target-card-top">
+              <div class="target-icon-wrap" style="--icon-bg: #E9C9CC; --icon-color: #8F2635;">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 3v18"/>
+                  <path d="m3 7 9-3 9 3"/>
+                  <path d="M6 10a5 5 0 0 0 0 6h12a5 5 0 0 0 0-6"/>
+                </svg>
+              </div>
+              <span class="target-number">01</span>
+            </div>
+            <h4 class="target-title">Ending Discrimination</h4>
+            <p class="target-text">
+              Eliminate all forms of discrimination against all women, girls, and marginalized genders everywhere in legal codes, civic institutions, and social customs.
+            </p>
+            <div class="target-tag">Target 5.1 · Legal Rights</div>
+          </article>
+
+          <!-- Card 2: Eliminating Gender-Based Violence -->
+          <article class="target-card">
+            <div class="target-card-top">
+              <div class="target-icon-wrap" style="--icon-bg: #E9E3F2; --icon-color: #30202F;">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  <path d="m9 12 2 2 4-4"/>
+                </svg>
+              </div>
+              <span class="target-number">02</span>
+            </div>
+            <h4 class="target-title">Eliminating Gender-Based Violence</h4>
+            <p class="target-text">
+              Eradicate all forms of physical, sexual, and psychological violence against women and girls in both public and private spheres, including trafficking and sexual exploitation.
+            </p>
+            <div class="target-tag">Target 5.2 · Bodily Safety</div>
+          </article>
+
+          <!-- Card 3: Ending Harmful Practices -->
+          <article class="target-card">
+            <div class="target-card-top">
+              <div class="target-icon-wrap" style="--icon-bg: #FEE8E8; --icon-color: #E5243B;">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 6 6 18"/>
+                  <path d="m6 6 12 12"/>
+                </svg>
+              </div>
+              <span class="target-number">03</span>
+            </div>
+            <h4 class="target-title">Ending Harmful Practices</h4>
+            <p class="target-text">
+              Eliminate all harmful practices, such as child, early, and forced marriages, female genital mutilation, and dowry-related abuses that strip individuals of life choices.
+            </p>
+            <div class="target-tag">Target 5.3 · Child Protection</div>
+          </article>
+
+          <!-- Card 4: Recognizing Unpaid Care Work -->
+          <article class="target-card">
+            <div class="target-card-top">
+              <div class="target-icon-wrap" style="--icon-bg: #FAF0E4; --icon-color: #8F2635;">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                </svg>
+              </div>
+              <span class="target-number">04</span>
+            </div>
+            <h4 class="target-title">Recognizing Unpaid Care Work</h4>
+            <p class="target-text">
+              Recognize and value unpaid caregiving and domestic work through the provision of public services, infrastructure, social protection policies, and shared household responsibility.
+            </p>
+            <div class="target-tag">Target 5.4 · Economic Equity</div>
+          </article>
+
+          <!-- Card 5: Equal Leadership Opportunities -->
+          <article class="target-card">
+            <div class="target-card-top">
+              <div class="target-icon-wrap" style="--icon-bg: #E9E3F2; --icon-color: #8F2635;">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <polyline points="16 11 18 13 22 9"/>
+                </svg>
+              </div>
+              <span class="target-number">05</span>
+            </div>
+            <h4 class="target-title">Equal Leadership Opportunities</h4>
+            <p class="target-text">
+              Ensure women’s full and effective participation and equal opportunities for leadership at all levels of decision-making in political, corporate, and public life.
+            </p>
+            <div class="target-tag">Target 5.5 · Governance</div>
+          </article>
+
+          <!-- Card 6: Empowerment Through Technology -->
+          <article class="target-card">
+            <div class="target-card-top">
+              <div class="target-icon-wrap" style="--icon-bg: #E9C9CC; --icon-color: #30202F;">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect width="18" height="18" x="3" y="3" rx="2"/>
+                  <path d="m9 8 3 3-3 3"/>
+                  <line x1="14" x2="16" y1="14" y2="14"/>
+                </svg>
+              </div>
+              <span class="target-number">06</span>
+            </div>
+            <h4 class="target-title">Empowerment Through Technology</h4>
+            <p class="target-text">
+              Enhance the use of enabling technology, particularly information and communications technology, to promote gender equity, financial inclusion, and digital independence.
+            </p>
+            <div class="target-tag">Target 5.B · Digital Access</div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. SURVEY SECTION -->
+    <section class="survey-section" id="survey">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-eyebrow">YOUR VOICE MATTERS</span>
+          <h2 class="section-title">Gender Equality Survey</h2>
+          <div class="title-underline"></div>
+          <p class="section-description">
+            Participate in our 10-question community survey. Your anonymous responses help us map grassroots perspectives and immediately reflect in the live analytics dashboard below.
+          </p>
+        </div>
+
+        <!-- Survey Card Wizard App -->
+        <div class="survey-app-card" id="surveyApp">
+          
+          <!-- Survey Progress Header -->
+          <div class="survey-card-header">
+            <div class="survey-meta-left">
+              <span class="survey-indicator" id="surveyStepBadge">Question 01 of 10</span>
+              <span class="survey-category-pill" id="surveyCategoryPill">Demographics</span>
+            </div>
+            <div class="survey-meta-right">
+              <span class="survey-percent-label" id="surveyPercentLabel">10% Completed</span>
+            </div>
+          </div>
+          
+          <!-- Animated Progress Bar -->
+          <div class="survey-progress-track" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" aria-label="Survey completion progress">
+            <div class="survey-progress-fill" id="surveyProgressBar" style="width: 10%;"></div>
+          </div>
+
+          <!-- Wizard Question Form / Stage -->
+          <form id="surveyForm" onsubmit="return false;" novalidate>
+            <div class="survey-stage" id="surveyStage">
+              
+              <!-- STEP 1: Age Group -->
+              <div class="survey-step active" data-step="1" data-category="Demographics">
+                <div class="step-header">
+                  <span class="step-num-tag">01</span>
+                  <h3 class="step-question">What is your age group?</h3>
+                  <p class="step-sub">Select the bracket that best describes your current age.</p>
+                </div>
+                <div class="options-grid">
+                  <label class="option-card" tabindex="0">
+                    <input type="radio" name="q1_age" value="Under 18" required>
+                    <span class="option-check"></span>
+                    <span class="option-content">
+                      <strong class="option-title">Under 18</strong>
+                      <span class="option-desc">Youth &amp; Secondary students</span>
+                    </span>
+                  </label>
+                  <label class="option-card" tabindex="0">
+                    <input type="radio" name="q1_age" value="18–24">
+                    <span class="option-check"></span>
+                    <span class="option-content">
+                      <strong class="option-title">18–24</strong>
+                      <span class="option-desc">University students &amp; young adults</span>
+                    </span>
+                  </label>
+                  <label class="option-card" tabindex="0">
+                    <input type="radio" name="q1_age" value="25–34">
+                    <span class="option-check"></span>
+                    <span class="option-content">
+                      <strong class="option-title">25–34</strong>
+                      <span class="option-desc">Early-to-mid career professionals</span>
+                    </span>
+                  </label>
+                  <label class="option-card" tabindex="0">
+                    <input type="radio" name="q1_age" value="35–49">
+                    <span class="option-check"></span>
+                    <span class="option-content">
+                      <strong class="option-title">35–49</strong>
+                      <span class="option-desc">Established professionals &amp; parents</span>
+                    </span>
+                  </label>
+                  <label class="option-card" tabindex="0">
+                    <input type="radio" name="q1_age" value="50+">
+                    <span class="option-check"></span>
+                    <span class="option-content">
+                      <strong class="option-title">50+</strong>
+                      <span class="option-desc">Senior community members &amp; elders</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- STEP 2: Gender Identity -->
+              <div class="survey-step" data-step="2" data-category="Demographics">
+                <div class="step-header">
+                  <span class="step-num-tag">02</span>
+                  <h3 class="step-question">How would you describe your gender?</h3>
+                  <p class="step-sub">Select the identity that best resonates with you.</p>
+                </div>
+                <div class="options-grid">
+                  <label class="option-card" tabindex="0">
+                    <input type="radio" name="q2_gender" value="Woman" required>
+                    <span class="option-check"></span>
+                    <span class="option-content">
+                      <strong class="option-title">Woman</strong>
+                      <span class="option-desc">Cisgender or transgender female</span>
+                    </span>
+                  </label>
+                  <label class="option-card" tabindex="0">
+                    <input type="radio" name="q2_gender" value="Man">
+                    <span class="option-check"></span>
+                    <span class="option-content">
+                      <strong class="option-title">Man</strong>
+                      <span class="option-desc">Cisgender or transgender male</span>
+                    </span>
+                  </label>
+                  <label class="option-card" tabindex="0">
+                    <input type="radio" name="q2_gender" value="Non-binary / Diverse">
+                    <span class="option-check"></span>
+                    <span class="option-content">
+                      <strong class="option-title">Non-binary / Diverse</strong>
+                      <span class="option-desc">Genderfluid, agender, or other spectrum</span>
+                    </span>
+                  </label>
+                  <label class="option-card" tabindex="0">
+                    <input type="radio" name="q2_gender" value="Prefer not to say">
+                    <span class="option-check"></span>
+                    <span class="option-content">
+                      <strong class="option-title">Prefer not to say</strong>
+                      <span class="option-desc">Keep response private</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- STEP 3: Perception of Equality in India -->
+              <div class="survey-step" data-step="3" data-category="Perception">
+                <div class="step-header">
+                  <span class="step-num-tag">03</span>
+                  <h3 class="step-question">Do you believe gender equality has been achieved in India?</h3>
+                  <p class="step-sub">Reflect on societal attitudes, legal protections, safety, and cultural expectations.</p>
+                </div>
+                <div class="options-grid">
+                  <label class="option-card" tabindex="0">
+                    <input type="radio" name="q3_achieved" value="Yes" required>
+                    <span class="option-check"></span>
+                    <span class="option-content">
+                      <strong class="option-title">Yes</strong>
+                      <span class="option-desc">Equal opportunities and rights exist in practice</span>
+                    </span>
+                  </label>
+                  <label class="option-card" tabindex="0">
+                    <input type="radio" name="q3_achieved" value="No">
+                    <span class="option-check"></span>
+                    <span class="option-content">
+                      <strong class="option-title">No</strong>
+                      <span class="option-desc">Substantial systemic inequality and bias persist</span>
+                    </span>
+                  </label>
+                  <label class="option-card" tabindex="0">
+                    <input type="radio" name="q3_achieved" value="Partially">
+                    <span class="option-check"></span>
+                    <span class="option-content">
+                      <strong class="option-title">Partially</strong>
+                      <span class="option-desc">Progress has been made in select areas, but wide gaps remain</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- STEP 4: Witnessed Discrimination -->
+              <div class="survey-step" data-step="4" data-category="Personal Experience">
+                <div class="step-header">
+                  <span class="step-num-tag">04</span>
+                  <h3 class="step-question">Have you witnessed gender-based discrimination?</h3>
+                  <p class="step-sub">This includes school, workplace, public transport, family dynamics, or digital spaces.</p>
+                </div>
+                <div class="options-grid">
+                  <label class="option-card" tabindex="0">
+                    <input type="radio" name="q4_discrimination" value="Yes" required>
+                    <span class="option-check"></span>
+                    <span class="option-content">
+                      <strong class="option-title">Yes</strong>
+                      <span class="option-desc">Observed or directly experienced discriminatory treatment</span>
+                    </span>
+                  </label>
+                  <label class="option-card" tabindex="0">
+                    <input type="radio" name="q4_discrimination" value="No">
+                    <span class="option-check"></span>
+                    <span class="option-content">
+                      <strong class="option-title">No</strong>
+                      <span class="option-desc">Have not observed instances of gender bias</span>
+                    </span>
+                  </label>
+                  <label class="option-card" tabindex="0">
+                    <input type="radio" name="q4_discrimination" value="Unsure">
+                    <span class="option-check"></span>
+                    <span class="option-content">
+                      <strong class="option-title">Unsure</strong>
+                      <span class="option-desc">Certain situations were ambiguous or subtle microaggressions</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- STEP 5: Career Opportunities -->
+              <div class="survey-step" data-step="5" data-category="Economic Rights">
+                <div class="step-header">
+                  <span class="step-num-tag">05</span>
+                  <h3 class="step-question">Do you believe men and women have equal career opportunities?</h3>
+                  <p class="step-sub">Consider hiring, leadership promotions, pay parity, and industry barriers.</p>
+                </div>
+                <div class="options-grid">
+                  <label class="option-card" tabindex="0">
+                    <input type="radio" name="q5_career" value="Yes" required>
+                    <span class="option-check"></span>
+                    <span class="option-content">
+                      <strong class="option-title">Yes</strong>
+                      <span class="option-desc">Meritocracy governs recruitment and career progression</span>
+                    </span>
+                  </label>
+                  <label class="option-card" tabindex="0">
+                    <input type="radio" name="q5_career" value="No">
+                    <span class="option-check"></span>
+                    <span class="option-content">
+                      <strong class="option-title">No</strong>
+                      <span class="option-desc">Glass ceilings and pay gaps continue to restrict advancement</span>
+                    </span>
+                  </label>
+                  <label class="option-card" tabindex="0">
+                    <input type="radio" name="q5_career" value="Sometimes">
+                    <span class="option-check"></span>
+                    <span class="option-content">
+                      <strong class="option-title">Sometimes</strong>
+                      <span class="option-desc">Depends heavily on the specific industry or progressive company</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- STEP 6: Household Responsibilities -->
+              <div class="survey-step" data-step="6" data-category="Domestic Equity">
+                <div class="step-header">
+                  <span class="step-num-tag">06</span>
+                  <h3 class="step-question">Should household responsibilities be shared equally?</h3>
+                  <p class="step-sub">Addressing unpaid domestic labor, childcare, caregiving, and family duties.</p>
+                </div>
+                <div class="options-grid">
+                  <label class="option-card" tabindex="0">
+                    <input type="radio" name="q6_household" value="Yes" required>
+                    <span class="option-check"></span>
+                    <span class="option-content">
+                      <strong class="option-title">Yes</strong>
+                      <span class="option-desc">Domestic labor is a shared mutual responsibility of all partners</span>
+                    </span>
+                  </label>
+                  <label class="option-card" tabindex="0">
+                    <input type="radio" name="q6_household" value="No">
+                    <span class="option-check"></span>
+                    <span class="option-content">
+                      <strong class="option-title">No</strong>
+                      <span class="option-desc">Traditional domestic roles should remain prioritized</span>
+                    </span>
+                  </label>
+                  <label class="option-card" tabindex="0">
+                    <input type="radio" name="q6_household" value="Depends">
+                    <span class="option-check"></span>
+                    <span class="option-content">
+                      <strong class="option-title">Depends</strong>
+                      <span class="option-desc">Should be decided based on work hours and relative financial income</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- STEP 7: Gender Stereotypes and Careers -->
+              <div class="survey-step" data-step="7" data-category="Social Norms">
+                <div class="step-header">
+                  <span class="step-num-tag">07</span>
+                  <h3 class="step-question">Do gender stereotypes affect career choices?</h3>
+                  <p class="step-sub">E.g., STEM, defense, leadership vs. nursing, teaching, and human resources.</p>
+                </div>
+                <div class="options-grid">
+                  <label class="option-card" tabindex="0">
+                    <input type="radio" name="q7_stereotypes" value="Strongly agree" required>
+                    <span class="option-check"></span>
+                    <span class="option-content">
+                      <strong class="option-title">Strongly agree</strong>
+                      <span class="option-desc">Deep cultural conditioning strongly directs vocational trajectories</span>
+                    </span>
+                  </label>
+                  <label class="option-card" tabindex="0">
+                    <input type="radio" name="q7_stereotypes" value="Agree">
+                    <span class="option-check"></span>
+                    <span class="option-content">
+                      <strong class="option-title">Agree</strong>
+                      <span class="option-desc">Stereotypes noticeably sway aspirations and family pressure</span>
+                    </span>
+                  </label>
+                  <label class="option-card" tabindex="0">
+                    <input type="radio" name="q7_stereotypes" value="Neutral">
+                    <span class="option-check"></span>
+                    <span class="option-content">
+                      <strong class="option-title">Neutral</strong>
+                      <span class="option-desc">Individual passion and aptitude are the dominant factors</span>
+                    </span>
+                  </label>
+                  <label class="option-card" tabindex="0">
+                    <input type="radio" name="q7_stereotypes" value="Disagree">
+                    <span class="option-check"></span>
+                    <span class="option-content">
+                      <strong class="option-title">Disagree</strong>
+                      <span class="option-desc">Modern generations choose vocations purely on personal desire</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- STEP 8: Educational Discussions -->
+              <div class="survey-step" data-step="8" data-category="Education">
+                <div class="step-header">
+                  <span class="step-num-tag">08</span>
+                  <h3 class="step-question">Is gender equality adequately discussed in educational institutions?</h3>
+                  <p class="step-sub">Evaluate classroom curricula, faculty training, and campus workshops.</p>
+                </div>
+                <div class="options-grid">
+                  <label class="option-card" tabindex="0">
+                    <input type="radio" name="q8_education" value="Thoroughly discussed" required>
+                    <span class="option-check"></span>
+                    <span class="option-content">
+                      <strong class="option-title">Thoroughly discussed</strong>
+                      <span class="option-desc">Active, structured, and constructive curriculum integration</span>
+                    </span>
+                  </label>
+                  <label class="option-card" tabindex="0">
+                    <input type="radio" name="q8_education" value="Needs much more focus">
+                    <span class="option-check"></span>
+                    <span class="option-content">
+                      <strong class="option-title">Needs much more focus</strong>
+                      <span class="option-desc">Tokenistic or superficial; lacks depth and consistent sensitization</span>
+                    </span>
+                  </label>
+                  <label class="option-card" tabindex="0">
+                    <input type="radio" name="q8_education" value="Rarely discussed">
+                    <span class="option-check"></span>
+                    <span class="option-content">
+                      <strong class="option-title">Rarely discussed</strong>
+                      <span class="option-desc">Only mentioned during specific awareness days or events</span>
+                    </span>
+                  </label>
+                  <label class="option-card" tabindex="0">
+                    <input type="radio" name="q8_education" value="Not discussed at all">
+                    <span class="option-check"></span>
+                    <span class="option-content">
+                      <strong class="option-title">Not discussed at all</strong>
+                      <span class="option-desc">Completely absent from formal curricula and dialogue</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- STEP 9: Area Requiring Most Improvement -->
+              <div class="survey-step" data-step="9" data-category="Priority Action">
+                <div class="step-header">
+                  <span class="step-num-tag">09</span>
+                  <h3 class="step-question">Which area requires the most improvement?</h3>
+                  <p class="step-sub">Select the primary frontier where reform is most urgently needed.</p>
+                </div>
+                <div class="options-grid">
+                  <label class="option-card" tabindex="0">
+                    <input type="radio" name="q9_improvement" value="Workplace & Pay Equity" required>
+                    <span class="option-check"></span>
+                    <span class="option-content">
+                      <strong class="option-title">Workplace &amp; Pay Equity</strong>
+                      <span class="option-desc">Equal pay, transparent promotion policies, and parental leave</span>
+                    </span>
+                  </label>
+                  <label class="option-card" tabindex="0">
+                    <input type="radio" name="q9_improvement" value="Safety & Legal Protection">
+                    <span class="option-check"></span>
+                    <span class="option-content">
+                      <strong class="option-title">Safety &amp; Legal Protection</strong>
+                      <span class="option-desc">Strict enforcement of laws, swift justice, and public security</span>
+                    </span>
+                  </label>
+                  <label class="option-card" tabindex="0">
+                    <input type="radio" name="q9_improvement" value="Social & Family Mindsets">
+                    <span class="option-check"></span>
+                    <span class="option-content">
+                      <strong class="option-title">Social &amp; Family Mindsets</strong>
+                      <span class="option-desc">Dismantling patriarchal conditioning and domestic expectations</span>
+                    </span>
+                  </label>
+                  <label class="option-card" tabindex="0">
+                    <input type="radio" name="q9_improvement" value="Leadership & Representation">
+                    <span class="option-check"></span>
+                    <span class="option-content">
+                      <strong class="option-title">Leadership &amp; Representation</strong>
+                      <span class="option-desc">Equal seats in parliament, governance, and corporate boards</span>
+                    </span>
+                  </label>
+                  <label class="option-card" tabindex="0">
+                    <input type="radio" name="q9_improvement" value="Education & Sensitization">
+                    <span class="option-check"></span>
+                    <span class="option-content">
+                      <strong class="option-title">Education &amp; Sensitization</strong>
+                      <span class="option-desc">Early childhood gender-neutral socialization and curriculum reform</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- STEP 10: One Change Society Should Make -->
+              <div class="survey-step" data-step="10" data-category="Vision & Voice">
+                <div class="step-header">
+                  <span class="step-num-tag">10</span>
+                  <h3 class="step-question">What is one change society should make to improve gender equality?</h3>
+                  <p class="step-sub">Select a priority theme and articulate your specific thought or recommendation.</p>
+                </div>
+                
+                <div class="step-10-wrapper">
+                  <p class="step-input-label">Select a core societal reform theme:</p>
+                  <div class="options-grid options-grid-compact">
+                    <label class="option-card" tabindex="0">
+                      <input type="radio" name="q10_theme" value="Shared parenting & paternity leave" required>
+                      <span class="option-check"></span>
+                      <span class="option-content">
+                        <strong class="option-title">Shared parenting &amp; paternity leave</strong>
+                      </span>
+                    </label>
+                    <label class="option-card" tabindex="0">
+                      <input type="radio" name="q10_theme" value="Equal pay audits & salary transparency">
+                      <span class="option-check"></span>
+                      <span class="option-content">
+                        <strong class="option-title">Equal pay audits &amp; salary transparency</strong>
+                      </span>
+                    </label>
+                    <label class="option-card" tabindex="0">
+                      <input type="radio" name="q10_theme" value="Early school gender sensitization">
+                      <span class="option-check"></span>
+                      <span class="option-content">
+                        <strong class="option-title">Early school gender sensitization</strong>
+                      </span>
+                    </label>
+                    <label class="option-card" tabindex="0">
+                      <input type="radio" name="q10_theme" value="Dismantling daily microaggressions">
+                      <span class="option-check"></span>
+                      <span class="option-content">
+                        <strong class="option-title">Dismantling daily microaggressions</strong>
+                      </span>
+                    </label>
+                  </div>
+
+                  <div class="written-response-box">
+                    <label for="q10_text" class="written-label">
+                      <span>In your own words (Optional written reflection):</span>
+                      <span class="written-hint">Max 250 characters</span>
+                    </label>
+                    <textarea 
+                      id="q10_text" 
+                      name="q10_comment" 
+                      rows="3" 
+                      maxlength="250" 
+                      placeholder="e.g., Normalize fathers taking paternity leave and educate children that empathy, domestic responsibility, and ambition belong equally to everyone."
+                    ></textarea>
+                    <div class="char-count" id="charCount">0 / 250</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Survey Validation Alert -->
+            <div class="survey-alert" id="surveyAlert" role="alert" aria-live="polite">
+              <span class="alert-icon" aria-hidden="true">⚠️</span>
+              <span id="surveyAlertText">Please select an option to proceed.</span>
+            </div>
+
+            <!-- Survey Navigation Controls -->
+            <div class="survey-controls">
+              <button type="button" class="btn btn-outline" id="prevBtn" disabled>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                <span>Previous</span>
+              </button>
+
+              <div class="controls-center">
+                <span class="stepper-dots" id="stepperDots" aria-hidden="true">
+                  <!-- Generated dots for 10 steps -->
+                </span>
+              </div>
+
+              <button type="button" class="btn btn-primary" id="nextBtn">
+                <span id="nextBtnText">Continue</span>
+                <svg id="nextBtnIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </form>
+
+          <!-- Survey Completion Confirmation Screen -->
+          <div class="survey-completion" id="surveyCompletion" style="display: none;" aria-live="polite">
+            <div class="completion-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#8F2635" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+            </div>
+            <span class="completion-badge">RESPONSE RECORDED</span>
+            <h3 class="completion-title">Thank you for contributing your voice.</h3>
+            <p class="completion-desc">
+              Your response has been integrated into our research dataset. The real-time analytics dashboard below has just been updated with your submission.
+            </p>
+            <div class="completion-actions">
+              <a href="#insights" class="btn btn-primary btn-lg" id="viewInsightsBtn">
+                <span>View Updated Insights</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+              </a>
+              <button type="button" class="btn btn-outline btn-lg" id="retakeSurveyBtn">
+                <span>Retake / Submit Another</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. INSIGHTS DASHBOARD -->
+    <section class="insights-section" id="insights">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-eyebrow">EMPIRICAL DATA &amp; ANALYSIS</span>
+          <h2 class="section-title">Survey Insights &amp; Analytics Dashboard</h2>
+          <div class="title-underline"></div>
+          <p class="section-description">
+            Examining grassroots sentiments on gender parity, domestic burden distribution, institutional trust, and systemic barriers in modern India.
+          </p>
+        </div>
+
+        <!-- Demonstration Data Transparency Banner -->
+        <div class="demo-data-notice" role="note" aria-label="Dataset Transparency Notice">
+          <div class="notice-icon" aria-hidden="true">ℹ️</div>
+          <div class="notice-content">
+            <h4 class="notice-title">Academic Demonstration Dataset Notice</h4>
+            <p class="notice-text">
+              <strong>Simulated Demonstration Data:</strong> Baseline figures contain <strong>16 fictional demonstration participants</strong> configured for college presentation purposes. Completing the survey above immediately persists and recalculates all metrics and charts in real-time in your browser's LocalStorage.
+            </p>
+          </div>
+          <div class="notice-actions">
+            <button type="button" class="btn btn-secondary-subtle btn-sm" id="resetDemoBtn" title="Reset dataset back to the initial 16 demo participants">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+              <span>Reset Demo Data</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 4 Top Metric Cards -->
+        <div class="metrics-grid">
+          
+          <!-- Metric Card 1: Total Participants -->
+          <div class="metric-card">
+            <div class="metric-card-header">
+              <span class="metric-label">TOTAL PARTICIPANTS</span>
+              <span class="metric-pill pill-plum" id="metricLivePill">Active</span>
+            </div>
+            <div class="metric-value-wrap">
+              <span class="metric-value counter" id="statTotalParticipants" data-target="16">16</span>
+              <span class="metric-unit">Respondents</span>
+            </div>
+            <p class="metric-context">
+              Aggregated from <span id="statRealSubmissionsCount">0</span> live browser submission(s) and 16 baseline demonstration records.
+            </p>
+            <div class="metric-bar-wrap">
+              <div class="metric-progress-bar" style="width: 100%; background-color: #8F2635;"></div>
+            </div>
+          </div>
+
+          <!-- Metric Card 2: Percentage Reporting Discrimination -->
+          <div class="metric-card">
+            <div class="metric-card-header">
+              <span class="metric-label">WITNESSED DISCRIMINATION</span>
+              <span class="metric-pill pill-burgundy">High Incidence</span>
+            </div>
+            <div class="metric-value-wrap">
+              <span class="metric-value counter" id="statDiscriminationPercent" data-target="68.8">68.8</span>
+              <span class="metric-unit">%</span>
+            </div>
+            <p class="metric-context">
+              <strong id="statDiscriminationCount">11</strong> of <span class="stat-total-ref">16</span> respondents report personally observing gender-based discrimination.
+            </p>
+            <div class="metric-bar-wrap">
+              <div class="metric-progress-bar" id="statDiscriminationBar" style="width: 68.8%; background-color: #E5243B;"></div>
+            </div>
+          </div>
+
+          <!-- Metric Card 3: Support for Equal Household Work -->
+          <div class="metric-card">
+            <div class="metric-card-header">
+              <span class="metric-label">EQUAL HOUSEHOLD SHARING</span>
+              <span class="metric-pill pill-rose">Broad Consensus</span>
+            </div>
+            <div class="metric-value-wrap">
+              <span class="metric-value counter" id="statHouseholdPercent" data-target="87.5">87.5</span>
+              <span class="metric-unit">%</span>
+            </div>
+            <p class="metric-context">
+              <strong id="statHouseholdCount">14</strong> of <span class="stat-total-ref">16</span> affirm that unpaid domestic chores must be shared equally by all partners.
+            </p>
+            <div class="metric-bar-wrap">
+              <div class="metric-progress-bar" id="statHouseholdBar" style="width: 87.5%; background-color: #8F2635;"></div>
+            </div>
+          </div>
+
+          <!-- Metric Card 4: Perception of Equality in India -->
+          <div class="metric-card">
+            <div class="metric-card-header">
+              <span class="metric-label">EQUALITY GAP IN INDIA</span>
+              <span class="metric-pill pill-lavender">Unresolved Gap</span>
+            </div>
+            <div class="metric-value-wrap">
+              <span class="metric-value counter" id="statNotAchievedPercent" data-target="87.5">87.5</span>
+              <span class="metric-unit">%</span>
+            </div>
+            <p class="metric-context">
+              <strong id="statNoOrPartiallyCount">14</strong> of <span class="stat-total-ref">16</span> state equality is either <em>Not Achieved</em> (50%) or only <em>Partially</em> (37.5%).
+            </p>
+            <div class="metric-bar-wrap">
+              <div class="metric-progress-bar" id="statEqualityBar" style="width: 87.5%; background-color: #30202F;"></div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Charts Grid -->
+        <div class="charts-grid">
+          
+          <!-- Chart 1: Donut Chart - Perception of Gender Equality in India -->
+          <div class="chart-panel">
+            <div class="chart-panel-header">
+              <div class="chart-header-text">
+                <span class="chart-eyebrow">QUESTION 03</span>
+                <h3 class="chart-title">Has Gender Equality Been Achieved in India?</h3>
+              </div>
+              <span class="chart-badge">Donut Distribution</span>
+            </div>
+            <div class="chart-canvas-container donut-container">
+              <canvas id="chartEqualityAchieved" aria-label="Donut chart depicting whether respondents feel gender equality has been achieved in India" role="img"></canvas>
+            </div>
+            <div class="chart-interpretation">
+              <div class="interpretation-badge">Key Takeaway</div>
+              <p>
+                Only <strong id="interpretAchievedYes">12.5%</strong> of respondents believe gender equality has been achieved, while <strong id="interpretAchievedNo">50.0%</strong> unequivocally state it has not, pointing to profound ongoing cultural and institutional deficits.
+              </p>
+            </div>
+          </div>
+
+          <!-- Chart 2: Horizontal Bar Chart - Areas Requiring Most Improvement -->
+          <div class="chart-panel">
+            <div class="chart-panel-header">
+              <div class="chart-header-text">
+                <span class="chart-eyebrow">QUESTION 09</span>
+                <h3 class="chart-title">Urgent Priority Areas for Systemic Reform</h3>
+              </div>
+              <span class="chart-badge">Horizontal Ranking</span>
+            </div>
+            <div class="chart-canvas-container bar-container">
+              <canvas id="chartImprovementAreas" aria-label="Horizontal bar chart illustrating community rankings of areas requiring reform" role="img"></canvas>
+            </div>
+            <div class="chart-interpretation">
+              <div class="interpretation-badge">Key Takeaway</div>
+              <p>
+                Public safety, criminal justice enforcement, and social/family mindsets emerge as the primary bottlenecks, exceeding purely legislative or policy declarations.
+              </p>
+            </div>
+          </div>
+
+          <!-- Chart 3: Response Distribution - Career vs Household Perceptions -->
+          <div class="chart-panel">
+            <div class="chart-panel-header">
+              <div class="chart-header-text">
+                <span class="chart-eyebrow">QUESTIONS 05 &amp; 06</span>
+                <h3 class="chart-title">Workplace Opportunities vs. Domestic Labor Reality</h3>
+              </div>
+              <span class="chart-badge">Comparative Breakdown</span>
+            </div>
+            <div class="chart-canvas-container bar-container">
+              <canvas id="chartCareerVsDomestic" aria-label="Comparative bar chart comparing perceived equal career opportunities vs support for equal domestic responsibilities" role="img"></canvas>
+            </div>
+            <div class="chart-interpretation">
+              <div class="interpretation-badge">Key Takeaway</div>
+              <p>
+                While an overwhelming <strong id="interpretHouseholdYes">87.5%</strong> endorse shared domestic responsibility in principle, only <strong id="interpretCareerYes">18.8%</strong> witness true workplace parity, reflecting the friction between private values and commercial practices.
+              </p>
+            </div>
+          </div>
+
+          <!-- Chart 4: Discrimination Experience Distribution -->
+          <div class="chart-panel">
+            <div class="chart-panel-header">
+              <div class="chart-header-text">
+                <span class="chart-eyebrow">QUESTION 04</span>
+                <h3 class="chart-title">Lived Witness of Gender-Based Discrimination</h3>
+              </div>
+              <span class="chart-badge">Incidence Ratio</span>
+            </div>
+            <div class="chart-canvas-container donut-container">
+              <canvas id="chartDiscrimination" aria-label="Polar/Donut chart of observed discrimination occurrences" role="img"></canvas>
+            </div>
+            <div class="chart-interpretation">
+              <div class="interpretation-badge">Key Takeaway</div>
+              <p>
+                Over two-thirds of community participants report directly observing or enduring gender-based bias, demonstrating that inequality is an everyday reality rather than an abstract concept.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Qualitative Voices Section: Responses to Question 10 -->
+        <div class="community-voices-container">
+          <div class="voices-header">
+            <div>
+              <span class="section-eyebrow">COMMUNITY PERSPECTIVES</span>
+              <h3 class="voices-title">What One Change Must Society Make?</h3>
+              <p class="voices-subtitle">Direct thoughts and recommendations submitted by survey participants.</p>
+            </div>
+            <div class="voices-counter-badge" id="voicesCountBadge">16 Reflections</div>
+          </div>
+
+          <div class="voices-grid" id="voicesGrid">
+            <!-- Dynamically populated from JS -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 6. FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      
+      <!-- Footer Top Row -->
+      <div class="footer-grid">
+        
+        <!-- Col 1: Brand & Description -->
+        <div class="footer-col footer-brand-col">
+          <div class="footer-logo">
+            <span class="logo-mark">
+              <svg viewBox="0 0 28 28" width="22" height="22" aria-hidden="true" focusable="false">
+                <circle cx="14" cy="14" r="13" fill="#FAF7F2" />
+                <line x1="8" y1="11" x2="20" y2="11" stroke="#8F2635" stroke-width="2.5" stroke-linecap="round" />
+                <line x1="8" y1="17" x2="20" y2="17" stroke="#8F2635" stroke-width="2.5" stroke-linecap="round" />
+              </svg>
+            </span>
+            <span class="footer-logo-title">EQUAL</span>
+          </div>
+          <p class="footer-description">
+            An interactive educational and survey-based research initiative for a college TREP project exploring United Nations Sustainable Development Goal 5: Gender Equality.
+          </p>
+          <div class="footer-sdg-emblem">
+            <span class="emblem-square">5</span>
+            <div class="emblem-text">
+              <strong>GENDER EQUALITY</strong>
+              <span>UN 2030 Agenda</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Platform</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Overview</a></li>
+            <li><a href="#about">About SDG 05</a></li>
+            <li><a href="#sdg-targets">Implementation Pillars</a></li>
+            <li><a href="#survey">Take the Survey</a></li>
+            <li><a href="#insights">Insights Dashboard</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: UN SDG Resources -->
+        <div class="footer-col">
+          <h4 class="footer-heading">SDG 5 References</h4>
+          <ul class="footer-links">
+            <li><a href="https://sdgs.un.org/goals/goal5" target="_blank" rel="noopener noreferrer">UN Department of Economic &amp; Social Affairs ↗</a></li>
+            <li><a href="https://www.unwomen.org" target="_blank" rel="noopener noreferrer">UN Women Global Data Hub ↗</a></li>
+            <li><a href="https://www.undp.org/sustainable-development-goals/gender-equality" target="_blank" rel="noopener noreferrer">UNDP Gender Equality Strategy ↗</a></li>
+            <li><a href="https://en.unesco.org/themes/gender-equality" target="_blank" rel="noopener noreferrer">UNESCO Gender in Education ↗</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Project Integrity & Contact -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Research Note</h4>
+          <p class="footer-academic-text">
+            Developed strictly for educational, academic, and demonstration purposes. Baseline data points represent simulated profiles. All live participant responses remain completely anonymous and browser-isolated.
+          </p>
+          <div class="footer-badge-wrap">
+            <span class="badge-mini">College TREP Capstone</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Closing Editorial Banner -->
+      <div class="footer-closing-quote">
+        <p class="closing-statement">&ldquo;Equality is not a destination. It is a responsibility.&rdquo;</p>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p class="copyright-text">
+          &copy; <span id="currentYear">2026</span> EQUAL Project · UN Sustainable Development Goal 05 Educational Platform.
+        </p>
+        <p class="built-note">
+          Designed with semantic HTML5, CSS3 &amp; Chart.js.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
